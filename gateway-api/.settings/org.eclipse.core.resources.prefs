@@ -1,0 +1,5 @@
+eclipse.preferences.version=1
+encoding//src/main/webapp/WEB-INF/error/403.html=UTF-8
+encoding//src/main/webapp/WEB-INF/error/404.html=UTF-8
+encoding//src/main/webapp/WEB-INF/error/405.html=UTF-8
+encoding//src/main/webapp/WEB-INF/error/500.html=UTF-8

@@ -1,0 +1,106 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>gateway-api</groupId>
+  <artifactId>com.gateway.api</artifactId>
+  <packaging>war</packaging>
+  <version>1.0</version>
+  <name>com.sfpay.hybrid Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+   <properties>
+    <org.springframework.version>3.2.8.RELEASE</org.springframework.version>
+    
+    <commons-io.version>2.4</commons-io.version>
+    <commons-fileupload.version>1.2.1</commons-fileupload.version>
+    
+    <jstl.version>1.2</jstl.version>
+    <taglibs.version>1.1.2</taglibs.version>
+    <jsp.version>2.2</jsp.version>
+    <servlet-api.version>3.0.1</servlet-api.version>
+    
+    
+    <log4j.version>1.2.9</log4j.version>
+    <junit.version>3.8.1</junit.version>
+  </properties>
+  
+  
+  
+  
+  <dependencies>
+ 	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-context</artifactId>
+		<version>${org.springframework.version}</version>
+	</dependency> 
+ 	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-web</artifactId>
+		<version>${org.springframework.version}</version>
+	</dependency> 
+ 	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-webmvc</artifactId>
+		<version>${org.springframework.version}</version>
+	</dependency> 
+
+
+	<dependency>
+		<groupId>log4j</groupId>
+		<artifactId>log4j</artifactId>
+		<version>${log4j.version}</version>
+	</dependency>
+	<!-- 注释文件上传相关 -->
+<!-- 	<dependency>
+	  <groupId>commons-io</groupId>
+	  <artifactId>commons-io</artifactId>
+	  <version>${commons-io.version}</version>
+	</dependency>
+	<dependency>
+	  <groupId>commons-fileupload</groupId>
+	  <artifactId>commons-fileupload</artifactId>
+	  <version>${commons-fileupload.version}</version>
+	</dependency> -->
+	
+	
+<!-- 注释测试框架相关 -->
+<!-- 	<dependency>
+		<groupId>junit</groupId>
+		<artifactId>junit</artifactId>
+		<version>${junit.version}</version>
+		<scope>test</scope>
+	</dependency> -->
+<!-- 注释JSP相关的 -->
+<!-- 	<dependency>
+		<groupId>jstl</groupId>
+		<artifactId>jstl</artifactId>
+		<version>${jstl.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>taglibs</groupId>
+		<artifactId>standard</artifactId>
+		<version>${taglibs.version}</version>
+	</dependency>-->
+	<dependency>
+		<groupId>javax.servlet</groupId>
+		<artifactId>javax.servlet-api</artifactId>
+		<version>${servlet-api.version}</version>
+		<scope>provided</scope>
+	</dependency>
+	<dependency>
+		<groupId>javax.servlet.jsp</groupId>
+		<artifactId>jsp-api</artifactId>
+		<version>${jsp.version}</version>
+		<scope>provided</scope>
+	</dependency>
+	
+	
+		<dependency>
+		<groupId>skeleton</groupId>
+		<artifactId>com.gateway.skeleton</artifactId>
+		<version>0.0.1</version>
+	</dependency> 
+</dependencies>
+  <build>
+    <finalName>gateway-api</finalName>
+  </build>
+</project>

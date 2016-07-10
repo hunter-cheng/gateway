@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.sfpay.gatprx.dao.IMerInfoDao">
+	<resultMap id="UserInfo" type="com.gateway.model.User">
+		<id column="ID" property="id" jdbcType="NUMERIC" />
+		<result column="USER_NAME" property="name" />
+		<result column="USER_PASSWORD" property="password" />
+	</resultMap>
+
+	<select id="findUser" resultMap="UserInfo" parameterType="com.gateway.model.User">
+		SELECT * FROM user WHERE username=#{name} AND password=#{password}
+	</select>
+	<!-- 插入自增序列 -->
+	<insert id="createUser" parameterType="com.gateway.model.User">
+		INSERT INTO user (id,username,password) VALUES
+		(SEQ_MER_INFO.NEXTVAL,#{name,jdbcType=VARCHAR},#{password,jdbcType=VARCHAR})
+	</insert>
+
+	<update id="updateUser" parameterType="com.gateway.model.User">
+		UPDATE user SET password=#{password} WHERE id=#{id}
+	</update>
+	<delete id="deleteUser" parameterType="int">
+		DELETE FROM user WHERE id=#{id}
+	</delete>
+
+</mapper>
