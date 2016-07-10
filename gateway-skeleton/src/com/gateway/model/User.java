@@ -1,5 +1,10 @@
 package com.gateway.model;
 
+/**
+ * 用户
+ * @author hunter
+ *
+ */
 public class User {
     private int id;
     private String name;
