@@ -21,6 +21,7 @@
     
     <log4j.version>1.2.9</log4j.version>
     <junit.version>4.10</junit.version>
+    <hessian.version>4.0.7</hessian.version>
   </properties>
   
   
@@ -42,7 +43,11 @@
 		<artifactId>spring-webmvc</artifactId>
 		<version>${org.springframework.version}</version>
 	</dependency> 
-
+<dependency>  
+	    <groupId>com.caucho</groupId>  
+	    <artifactId>hessian</artifactId>  
+	    <version>${hessian.version}</version>  
+	  </dependency> 
 
 	<dependency>
 		<groupId>log4j</groupId>
@@ -62,13 +67,22 @@
 	</dependency> -->
 	
 	
-<!-- 注释测试框架相关 -->
-<!-- 	<dependency>
+<!-- 测试框架相关 -->
+	<dependency>
 		<groupId>junit</groupId>
 		<artifactId>junit</artifactId>
 		<version>${junit.version}</version>
 		<scope>test</scope>
-	</dependency> -->
+	</dependency> 
+	
+	<dependency>  
+    <groupId>org.springframework</groupId>  
+    <artifactId>spring-test</artifactId>  
+    <version>${org.springframework.version}</version>  
+    <scope>test</scope>  
+  </dependency>  
+	
+	
 <!-- 注释JSP相关的 -->
 <!-- 	<dependency>
 		<groupId>jstl</groupId>

@@ -6,12 +6,14 @@
        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd   
        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd   
        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+     
+   
+       
     <!--hessian 服务发布-->
     <bean name="/userService"   class="org.springframework.remoting.caucho.HessianServiceExporter">  
         <!-- service引用具体的实现实体Bean-->
-        <property name="service" value="com.gateway.service.UserServiceImpl" />  
+        <property name="service" ref="userServiceImpl"/>  
         <property name="serviceInterface" value="com.gateway.service.IUserService" />  
     </bean>
     <!--hessian 服务发布-->
-      
 </beans>  

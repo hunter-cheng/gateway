@@ -3,6 +3,13 @@ package com.gateway.service;
 import com.gateway.model.User;
 
 public interface IUserService {
+	
+    /**
+     * 用户注册
+     * @param id
+     * @return
+     */
+    public boolean reg(String name,String password); 
 	 /**
 	  * 用户登陆
 	  * @param name
@@ -15,5 +22,5 @@ public interface IUserService {
       * @param id
       * @return
       */
-     public boolean logout(String name,String password); 
+     public boolean logout(String name); 
 }

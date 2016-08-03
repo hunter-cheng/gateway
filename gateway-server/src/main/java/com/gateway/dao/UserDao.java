@@ -1,10 +1,9 @@
 package com.gateway.dao;
 
 
-import org.springframework.stereotype.Repository;
 
 import com.gateway.model.User;
-@Repository("userDao")
+
 public interface UserDao {
 	/**
 	 * 创建用户
