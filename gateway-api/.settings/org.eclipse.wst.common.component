@@ -4,7 +4,7 @@
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
-        <dependent-module archiveName="com.gateway.skeleton-0.0.1.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/com.gateway.skeleton/com.gateway.skeleton">
+        <dependent-module archiveName="com.gateway.skeleton-0.0.1.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/gateway-skeleton/gateway-skeleton">
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <property name="java-output-path" value="/gateway-api/target/classes"/>

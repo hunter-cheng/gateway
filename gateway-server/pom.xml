@@ -1,53 +1,98 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>gateway-server</groupId>
-  <artifactId>com.gateway.server</artifactId>
-  <packaging>war</packaging>
-  <version>1.0</version>
-  <name>com.gateway.api Maven Webapp</name>
-   <properties>
-    <org.springframework.version>3.2.8.RELEASE</org.springframework.version>
-    
-    
-    
-    
-    <log4j.version>1.2.9</log4j.version>
-    <junit.version>3.8.1</junit.version>
-  </properties>
-  
-  
-  <dependencies>
- 	<dependency>
-		<groupId>org.springframework</groupId>
-		<artifactId>spring-context</artifactId>
-		<version>${org.springframework.version}</version>
-	</dependency> 
- 	<dependency>
-		<groupId>org.springframework</groupId>
-		<artifactId>spring-web</artifactId>
-		<version>${org.springframework.version}</version>
-	</dependency> 
- 	<dependency>
-		<groupId>org.springframework</groupId>
-		<artifactId>spring-webmvc</artifactId>
-		<version>${org.springframework.version}</version>
-	</dependency> 
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>gateway-server</groupId>
+	<artifactId>com.gateway.server</artifactId>
+	<packaging>war</packaging>
+	<version>1.0</version>
+	<name>com.gateway.api Maven Webapp</name>
+	<properties>
+		<org.springframework.version>3.2.8.RELEASE</org.springframework.version>
+		<log4j.version>1.2.9</log4j.version>
+		<mysql.version>5.1.25</mysql.version>
+		<mybatis.version>3.2.7</mybatis.version>
+		<mybatis.spring.version>1.2.2</mybatis.spring.version>
+		<junit.version>4.10</junit.version>
+		<hessian.version>4.0.7</hessian.version>
+		 <servlet-api.version>3.0.1</servlet-api.version>  
+	</properties>
 
 
-	<dependency>
-		<groupId>log4j</groupId>
-		<artifactId>log4j</artifactId>
-		<version>${log4j.version}</version>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+			<version>${mybatis.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis-spring</artifactId>
+			<version>${mybatis.spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+		</dependency>
+		
+				<dependency>  
+    <groupId>org.slf4j</groupId>  
+    <artifactId>slf4j-log4j12</artifactId>  
+    <version>1.7.2</version>  
+</dependency>  
+		
+
+			<dependency>  
+	    <groupId>com.caucho</groupId>  
+	    <artifactId>hessian</artifactId>  
+	    <version>${hessian.version}</version>  
+	  </dependency> 
+			<dependency>
+		<groupId>javax.servlet</groupId>
+		<artifactId>javax.servlet-api</artifactId>
+		<version>${servlet-api.version}</version>
+		<scope>provided</scope>
 	</dependency>
-	<dependency>
-		<groupId>skeleton</groupId>
-		<artifactId>com.gateway.skeleton</artifactId>
-		<version>0.0.1</version>
-	</dependency>
+		
+		<dependency>
+			<groupId>skeleton</groupId>
+			<artifactId>com.gateway.skeleton</artifactId>
+			<version>0.0.1</version>
+		</dependency>
 
-  </dependencies>
-  <build>
-    <finalName>gateway-server</finalName>
-  </build>
+	</dependencies>
+	<build>
+		<finalName>gateway-server</finalName>
+	</build>
 </project>

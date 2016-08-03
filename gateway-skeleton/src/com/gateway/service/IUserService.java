@@ -15,5 +15,5 @@ public interface IUserService {
       * @param id
       * @return
       */
-     public boolean logout(int id); 
+     public boolean logout(String name,String password); 
 }
